@@ -7,5 +7,8 @@ class Progress(models.Model):
     is_completed = models.BooleanField(default=False)
     completed_at = models.DateTimeField(null=True, blank=True)
 
+    class Meta:
+        verbose_name_plural = "Progresses"
+
     def __str__(self):
         return f"{self.enrollment.user.username} - {self.lesson.title} ({'Completed' if self.is_completed else 'In Progress'})"

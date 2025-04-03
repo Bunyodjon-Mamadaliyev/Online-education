@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 class Review(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     course = models.ForeignKey('courses.Course', on_delete=models.CASCADE)
-    rating = models.PositiveIntegerField(verbose_name="Baho (1-5)")
+    rating = models.PositiveIntegerField()
     comment = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

@@ -1,8 +1,7 @@
 from django.db import models
 
-
 class Module(models.Model):
-    course = models.ForeignKey('courses.Course', on_delete=models.CASCADE)
+    course = models.ForeignKey('courses.Course', on_delete=models.CASCADE, null=False, blank=False)
     title = models.CharField(max_length=100)
     description = models.TextField()
     order = models.PositiveIntegerField(default=0)
@@ -10,3 +9,4 @@ class Module(models.Model):
 
     def __str__(self):
         return f"{self.order}. {self.title}"
+

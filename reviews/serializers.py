@@ -1,15 +1,13 @@
 from rest_framework import serializers
 from .models import Review
+from courses.models import Course
+from users.serializers import UserSerializer
+
 
 class ReviewSerializer(serializers.ModelSerializer):
-    replies = serializers.SerializerMethodField()
+    user = UserSerializer(read_only=True)
+    course = serializers.PrimaryKeyRelatedField(queryset=Course.objects.all())
 
     class Meta:
         model = Review
-        fields = ['id', 'user', 'course', 'rating', 'comment', 'parent_review', 'replies', 'created_at', 'updated_at']
-        read_only_fields = ['id', 'created_at', 'updated_at']
-
-    def get_replies(self, obj):
-        if obj.replies.exists():
-            return ReviewSerializer(obj.replies.all(), many=True).data
-        return []
+        fields = ["id", "user", "course", "rating", "comment", "created_at", "updated_at"]
