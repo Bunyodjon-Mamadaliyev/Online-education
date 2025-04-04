@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class Progress(models.Model):
     enrollment = models.ForeignKey('enrollments.Enrollment', on_delete=models.CASCADE)
     lesson = models.ForeignKey('lessons.Lesson', on_delete=models.CASCADE)

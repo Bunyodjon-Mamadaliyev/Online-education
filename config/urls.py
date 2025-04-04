@@ -26,5 +26,4 @@ urlpatterns = [
     path('api/', include('enrollments.urls')),
     path('api/', include('common.urls')),
     path('api/', include('reviews.urls')),
-
 ]

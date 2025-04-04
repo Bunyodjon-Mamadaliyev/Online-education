@@ -4,7 +4,6 @@ from reviews.models import Review
 from .serializers import ReviewSerializer
 from common.pagination import DefaultPagination
 
-
 class ReviewListCreateView(generics.ListCreateAPIView):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer

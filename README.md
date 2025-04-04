@@ -1,6 +1,5 @@
 # Online Ta'lim Platformasi !
 
-![Online Ta'lim Platformasi](https://raw.githubusercontent.com/Bunyodjon-Mamadaliyev/Online-education/main/media/Online.webp)
 
 ### Django asosida qurilgan kurslar, darslar, ro'yxatdan o'tish va foydalanuvchilar progressini boshqarish uchun onlayn ta'lim platformasi.
 
@@ -52,7 +51,15 @@ python -m venv venv
 ```
 pip install -r requirements.txt
 ```
-#### 4.Ishga tushirish serverini ishga tushiring:
+#### 4.Migratsiyalar yarating:
+```
+ python manage.py makemigrations
+```
+#### 5.Migratsiyalarni qo‘llang:
+```
+ python manage.py migrate  
+```
+#### 6.Ishga tushirish serverini ishga tushiring:
 ```
 python manage.py runserver
 ```
