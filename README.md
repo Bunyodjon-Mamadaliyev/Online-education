@@ -1,5 +1,8 @@
-# Online Ta'lim Platformasi !
-
+<table align="center" border="0">
+  <img src="./media/Talim.webp" alt="Online Ta'lim Platformasi" width="130" style="border-radius: 50%; box-shadow: 0 0 20px rgba(0, 120, 215, 0.7); border: 3px solid #0078d7;">
+  <h1>Online Ta'lim Platformasi</h1>
+  <h4>Zamonaviy ta'lim imkoniyatlari</h4>
+</table>
 
 ### Django asosida qurilgan kurslar, darslar, ro'yxatdan o'tish va foydalanuvchilar progressini boshqarish uchun onlayn ta'lim platformasi.
 
